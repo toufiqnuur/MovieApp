@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/primary_dark"
+    android:layout_marginBottom="12dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:src="@drawable/avatar"/>
+        <TextView
+            android:id="@+id/tv_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6.3"
+            android:textColor="@color/teal"
+            android:fontFamily="@font/poppins_medium"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:layout_marginTop="14dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="12dp">
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="John Doe"
+            android:textColor="@color/lightgray"
+            android:fontFamily="@font/poppins_medium"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tv_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government."
+            android:textColor="@color/lightgray"
+            android:fontFamily="@font/poppins"/>
+    </LinearLayout>
+</LinearLayout>
