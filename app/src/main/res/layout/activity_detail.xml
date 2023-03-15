@@ -91,7 +91,7 @@
         android:layout_gravity="left|bottom"
         app:backgroundTint="@color/secondary_dark"
         app:iconGravity="textStart"
-        app:icon="@drawable/ic_back"
-        app:iconSize="16dp"
+        app:icon="@drawable/baseline_arrow_back_24"
+        app:iconSize="18dp"
         app:iconTint="@color/lightgray" />
 </FrameLayout>

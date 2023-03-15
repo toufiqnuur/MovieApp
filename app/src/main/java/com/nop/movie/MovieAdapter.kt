@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 
-class MovieAdapter(val movie: Array<Movie>): RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
+class MovieAdapter(var movie: Array<Movie>): RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
 
     var onItemClickListener: ((Movie) -> Unit)? = null
 
@@ -39,5 +39,10 @@ class MovieAdapter(val movie: Array<Movie>): RecyclerView.Adapter<MovieAdapter.M
         holder.itemView.setOnClickListener {
             onItemClickListener?.invoke(movie[position])
         }
+    }
+
+     fun updateItem(newMovie: Array<Movie>) {
+        movie = newMovie
+        notifyDataSetChanged()
     }
 }

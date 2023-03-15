@@ -20,7 +20,7 @@ class DashboardActivity : AppCompatActivity() {
         binding.rvCategories.adapter = CategoryAdapter(categoryList)
 
         // Movie Adapter
-        val movieObj = Movie(R.drawable.movie, "Avangers End Game", "2019-08-03", "9.2", "From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government, undertaking high-risk black ops missions in exchange for commuted prison sentences.", "1466", "48.261.451")
+        val movieObj = Movie(R.drawable.movie, "Movie 1", "2019-08-03", "9.2", "From DC Comics comes the Suicide Squad, an antihero team of incarcerated supervillains who act as deniable assets for the United States government, undertaking high-risk black ops missions in exchange for commuted prison sentences.", "1466", "48.261.451")
         val movieList = arrayOf(movieObj, movieObj, movieObj, movieObj)
         val movieAdapter = MovieAdapter(movieList)
         binding.rvMovies.layoutManager = LinearLayoutManager(this)
@@ -30,6 +30,18 @@ class DashboardActivity : AppCompatActivity() {
             val intent = Intent(this, DetailActivity::class.java)
             intent.putExtra("movie", it)
             startActivity(intent)
+        }
+
+        // search handler
+        binding.btnSearch.setOnClickListener {
+            val searchQuery = binding.editSearch.text.toString()
+            if (searchQuery.isNotEmpty()) {
+                movieAdapter.updateItem(movieList.filter {
+                    it.title.lowercase().contains(searchQuery.lowercase())
+                }.toTypedArray())
+            } else {
+                movieAdapter.updateItem(movieList)
+            }
         }
     }
 }

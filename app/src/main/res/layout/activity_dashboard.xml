@@ -54,14 +54,14 @@
                 android:textColor="@color/lightgray"
                 android:textColorHint="@color/lightgray"
                 android:textSize="16sp"
-                app:layout_constraintEnd_toStartOf="@+id/btn_search1"
+                app:layout_constraintEnd_toStartOf="@+id/btn_search"
                 app:layout_constraintHorizontal_chainStyle="spread"
                 app:layout_constraintHorizontal_weight="1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_subtitle" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_search1"
+                android:id="@+id/btn_search"
                 android:layout_width="48dp"
                 android:layout_height="54dp"
                 android:layout_marginStart="23dp"
@@ -131,15 +131,15 @@
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Watch List"
-        android:fontFamily="@font/poppins_medium"
-        android:textStyle="bold"
-        android:textAllCaps="false"
+        android:layout_gravity="bottom|end"
         android:layout_marginEnd="29dp"
         android:layout_marginBottom="29dp"
-        app:icon="@drawable/ic_bookmark"
-        app:iconGravity="textEnd"
-        app:iconSize="16dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Watch List"
+        android:textAllCaps="false"
+        android:textStyle="bold"
         app:backgroundTint="@color/teal"
-        android:layout_gravity="bottom|right"/>
+        app:icon="@drawable/baseline_bookmark_24"
+        app:iconGravity="textEnd"
+        app:iconSize="16dp" />
 </FrameLayout>
